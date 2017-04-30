@@ -1,7 +1,8 @@
 import cheerio from 'cheerio';
+import request from 'request';
 
 
-export const html = async (inUrl)=>{
+export const load = async (inUrl)=>{
   return new Promise((resolve, reject) => {
     request(inUrl,(err,response,body)=>{
       if(!err){
